@@ -10,7 +10,7 @@ import html
 import re
 
 # ——— LOAD API & INISIALISASI LLM —————————
-GOOGLE_API_KEY = st.secrets["API_KEY"]
+GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
 
 llm = ChatGoogleGenerativeAI(
     model="gemini-1.5-flash",
@@ -27,13 +27,23 @@ Berikut adalah indikator dari suatu daerah yang belum memenuhi batas aman:
 
 Berikan saran kebijakan yang rinci dan dapat diimplementasikan oleh pemerintah daerah untuk memperbaiki kondisi tersebut. 
 
-
 Sertakan:
 - Dampak jika tidak diperbaiki
 - Intervensi yang bisa dilakukan pemerintah
 - Contoh konkrit jika ada
 
 Gunakan bahasa yang mudah dipahami oleh pemangku kebijakan daerah.
+
+Note: 
+1. **NCPR (Normative Consumption Production Ratio)** – menunjukkan rasio antara konsumsi pangan normatif dan produksi pangan lokal. Nilai tinggi menandakan defisit produksi lokal.
+2. **Persentase Kemiskinan** – mencerminkan daya beli masyarakat. Makin tinggi nilainya, makin sulit masyarakat menjangkau pangan.
+3. **Proporsi Pengeluaran untuk Pangan** – semakin tinggi proporsi ini, semakin besar tekanan ekonomi rumah tangga untuk mencukupi pangan dasar.
+4. **Persentase Rumah Tangga Tanpa Listrik** – mewakili keterbatasan infrastruktur dasar yang berdampak pada akses pangan dan kualitas hidup.
+5. **Persentase Rumah Tangga Tanpa Akses Air Bersih** – sangat berpengaruh pada keamanan pangan dan kesehatan keluarga.
+6. **Lama Sekolah Perempuan** – digunakan sebagai proksi untuk kualitas pengelolaan pangan dalam rumah tangga dan status gizi anak.
+7. **Rasio Penduduk per Tenaga Kesehatan** – mengukur akses layanan kesehatan. Semakin kecil rasio, semakin baik pelayanan dan pemantauan gizi (semakin sedikit jumlah penduduk yang ditangani oleh satu tenaga kesehatan).
+8. **Angka Harapan Hidup** – mencerminkan kondisi kesehatan umum masyarakat.
+9. **Prevalensi Stunting Balita** – indikator langsung dari pemanfaatan pangan dan status gizi anak di wilayah tersebut.
 """
 prompt = PromptTemplate.from_template(template)
 llm_chain = LLMChain(llm=llm, prompt=prompt)
