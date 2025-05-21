@@ -1,5 +1,4 @@
 import streamlit as st
-import streamlit.components.v1 as components
 import joblib
 import pandas as pd
 import os
@@ -11,7 +10,6 @@ import html
 import re
 
 # ——— LOAD API & INISIALISASI LLM —————————
-load_dotenv()
 GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
 
 llm = ChatGoogleGenerativeAI(
