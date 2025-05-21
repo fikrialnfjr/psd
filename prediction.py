@@ -9,8 +9,10 @@ from langchain.chains import LLMChain
 import html
 import re
 
+load_dotenv()
+
 # ——— LOAD API & INISIALISASI LLM —————————
-GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY") or st.secrets["GOOGLE_API_KEY"]
 
 llm = ChatGoogleGenerativeAI(
     model="gemini-1.5-flash",
@@ -63,7 +65,7 @@ def load_model(model_choice):
     if model_choice == "SVM":
         model_file = "best_svm_model.pkl"
     elif model_choice == "Random Forest":
-        model_file = "random_forest_classifier_best.pkl"
+        model_file = "random_forest_classifier_best_with_smote.pkl"
     else:
         st.error("Model tidak valid!")
         return None

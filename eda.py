@@ -4,7 +4,7 @@ import plotly.express as px
 
 def show_eda():
     # ===================== TREND KOMPOSIT NASIONAL =====================
-    st.markdown("### Trend Rata-Rata Komposit Nasional (2020–2024)")
+    st.markdown("#### Trend Rata-Rata Komposit Nasional (2020–2024)")
     trend_df = pd.read_csv("trend fsva.csv")
 
     fig_trend = px.line(
@@ -39,7 +39,7 @@ def show_eda():
         """)
 
     # ===================== EKSPLORASI PER PROVINSI =====================
-    st.markdown("### Eksplorasi 5 Provinsi Tertinggi per Indikator")
+    st.markdown("#### Eksplorasi 5 Provinsi Tertinggi per Indikator")
 
     df = pd.read_csv("fsva.csv")
     df["Provinsi"] = df["Wilayah"].apply(lambda x: x.split("-")[0].strip().title())
