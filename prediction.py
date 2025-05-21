@@ -77,7 +77,7 @@ def performPrediction():
         st.write("**Masukkan Nilai Variabel Kota/Kabupaten Anda**")
         col1, col2, col3 = st.columns(3)
         with col1:
-            NCPR = st.number_input('NCPR (Normative Consumption Production Ratio)', value=0.0)
+            NCPR = st.number_input('NCPR', value=0.0)
             Tanpa_Listrik = st.number_input('Tanpa Listrik (%)', value=0.0)
             Rasio_Tenaga_Kesehatan = st.number_input('Rasio Tenaga Kesehatan', value=0.0)
         with col2:
