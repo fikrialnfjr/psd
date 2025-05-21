@@ -12,7 +12,7 @@ import re
 
 # ——— LOAD API & INISIALISASI LLM —————————
 load_dotenv()
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY") or st.secrets["GOOGLE_API_KEY"]
+GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
 
 llm = ChatGoogleGenerativeAI(
     model="gemini-1.5-flash",
