@@ -37,15 +37,15 @@ Sertakan:
 Gunakan bahasa yang mudah dipahami oleh pemangku kebijakan daerah.
 
 Note: 
-1. **NCPR (Normative Consumption Production Ratio)** – menunjukkan rasio antara konsumsi pangan normatif dan produksi pangan lokal. Nilai tinggi menandakan defisit produksi lokal.
-2. **Persentase Kemiskinan** – mencerminkan daya beli masyarakat. Makin tinggi nilainya, makin sulit masyarakat menjangkau pangan.
-3. **Proporsi Pengeluaran untuk Pangan** – semakin tinggi proporsi ini, semakin besar tekanan ekonomi rumah tangga untuk mencukupi pangan dasar.
-4. **Persentase Rumah Tangga Tanpa Listrik** – mewakili keterbatasan infrastruktur dasar yang berdampak pada akses pangan dan kualitas hidup.
-5. **Persentase Rumah Tangga Tanpa Akses Air Bersih** – sangat berpengaruh pada keamanan pangan dan kesehatan keluarga.
-6. **Lama Sekolah Perempuan** – digunakan sebagai proksi untuk kualitas pengelolaan pangan dalam rumah tangga dan status gizi anak.
-7. **Rasio Penduduk per Tenaga Kesehatan** – mengukur akses layanan kesehatan. Semakin kecil rasio, semakin baik pelayanan dan pemantauan gizi (semakin sedikit jumlah penduduk yang ditangani oleh satu tenaga kesehatan).
-8. **Angka Harapan Hidup** – mencerminkan kondisi kesehatan umum masyarakat.
-9. **Prevalensi Stunting Balita** – indikator langsung dari pemanfaatan pangan dan status gizi anak di wilayah tersebut.
+1. **NCPR** – menunjukkan rasio antara konsumsi pangan normatif dan produksi pangan lokal. Nilai tinggi menandakan defisit produksi lokal.
+2. **Kemiskinan (%)** – mencerminkan daya beli masyarakat. Makin tinggi nilainya, makin sulit masyarakat menjangkau pangan.
+3. **Pengeluaran Pangan (%)** – semakin tinggi proporsi ini, semakin besar tekanan ekonomi rumah tangga untuk mencukupi pangan dasar.
+4. **Tanpa Listrik (%)** – mewakili keterbatasan infrastruktur dasar yang berdampak pada akses pangan dan kualitas hidup.
+5. **Tanpa Air Bersih (%)** – sangat berpengaruh pada keamanan pangan dan kesehatan keluarga.
+6. **Lama Sekolah Perempuan (tahun)** – digunakan sebagai proksi untuk kualitas pengelolaan pangan dalam rumah tangga dan status gizi anak.
+7. **Rasio Tenaga Kesehatan** – mengukur akses layanan kesehatan. Semakin kecil rasio, semakin baik pelayanan dan pemantauan gizi (semakin sedikit jumlah penduduk yang ditangani oleh satu tenaga kesehatan).
+8. **Angka Harapan Hidup (tahun)** – mencerminkan kondisi kesehatan umum masyarakat.
+9. **Stunting (%)** – indikator langsung dari pemanfaatan pangan dan status gizi anak di wilayah tersebut.
 """
 prompt = PromptTemplate.from_template(template)
 llm_chain = LLMChain(llm=llm, prompt=prompt)
