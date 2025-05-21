@@ -10,7 +10,7 @@ import html
 import re
 
 # ——— LOAD API & INISIALISASI LLM —————————
-GOOGLE_API_KEY = st.secrets["API_TOKEN"]
+GOOGLE_API_KEY = st.secrets["API_KEY"]
 
 llm = ChatGoogleGenerativeAI(
     model="gemini-1.5-flash",
